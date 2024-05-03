@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cotton Candy Delights</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap'); /* Playful font */
+        
+        body {
+            font-family: 'Indie Flower', cursive;
+            background: linear-gradient(to right, #FFB6C1, #A7D0E6); /* Gradient background */
+            color: #333;
+            padding: 20px;
+            margin: 0;
+            text-align: center; /* Center everything */
+        }
+        
+        .header {
+            padding: 30px;
+            background: linear-gradient(to right, #A7D0E6, #FFB6C1); /* Gradient header */
+            color: white;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .section {
+            display: inline-flex; /* Ensures content is centered */
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: rgba(255, 182, 193, 0.5); /* Transparent pink */
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .section img {
+            width: 200px; /* Image size */
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .section img:hover {
+            transform: scale(1.1);
+        }
+        
+        .section .content {
+            padding: 0 20px;
+            max-width: 600px; /* Content area */
+            text-align: left; /* Align text within the centered content */
+        }
+        
+        .flip-card {
+            perspective: 1000px;
+            display: inline-block; /* Keep flip card centered */
+            margin: 20px;
+        }
+        
+        .flip-card-inner {
+            position: relative;
+            width: 200px;
+            height: 400px; /* Longer flip card */
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+        
+        .flip-card-front {
+            background-color: #A7D0E6; /* Front background color */
+            color: white;
+        }
+        
+        .flip-card-back {
+            background-color: #FFD1DC; /* Back background color */
+            color: black;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Cotton Candy Delights</h1>
+    <p>Your sweet treat destination</p>
+</div>
+
+<div class="section">
+    <img src="https://example.com/cotton-candy-1.jpg" alt="Cotton Candy">
+    <div class="content">
+        <h2>History of Cotton Candy</h2>
+        <p>Cotton candy, also known as candy floss, is a classic treat with a history dating back to the 19th century. Its light and fluffy texture is achieved through a process of melting and spinning sugar, creating thin strands that resemble cotton.</p>
+    </div>
+</div>
+
+<div class="section">
+    <div class="content">
+        <h2>Making Cotton Candy at Home</h2>
+        <p>With modern cotton candy machines, it's easy to create your own fluffy clouds of sweetness at home. Experiment with different flavors and colors to make unique cotton candy creations for parties and gatherings.</p>
+    </div>
+    <img src="https://example.com/cotton-candy-2.jpg" alt="Making Cotton Candy">
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://example.com/cotton-candy-front-1.jpg" alt="Front Image 1"> <!-- Front image -->
+        </div>
+        <div class="flip-card-back">
+            <img src="https://example.com/cotton-candy-back-1.jpg" alt="Back Image 1"> <!-- Back image -->
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://example.com/cotton-candy-front-2.jpg" alt="Front Image 2"> <!-- Front image -->
+        </div>
+        <div class="flip-card-back">
+            <img src="https://example.com/cotton-candy-back-2.jpg" alt="Back Image 2"> <!-- Back image -->
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://example.com/cotton-candy-front-3.jpg" alt="Front Image 3"> <!-- Front image -->
+        </div>
+        <div class="flip-card-back">
+            <img src="https://example.com/cotton-candy-back-3.jpg" alt="Back Image 3"> <!-- Back image -->
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://example.com/cotton-candy-front-4.jpg" alt="Front Image 4"> <!-- Front image -->
+        </div>
+        <div class="flip-card-back">
+            <img src="https://example.com/cotton-candy-back-4.jpg" alt="Back Image 4"> <!-- Back image -->
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+
