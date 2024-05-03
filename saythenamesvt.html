@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SEVENTEEN</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=The+Youngest+Serif&display=swap');
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7; 
+        }
+
+        
+        audio {
+            display: none; /* Hide audio controls */
+        }
+
+        .mute-button {
+            position: fixed; 
+            top: 20px;
+            right: 20px;
+            background-color: #f7cac9; 
+            border: 1px solid #92a8d1; 
+            border-radius: 10px;
+            padding: 10px;
+            cursor: pointer;
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(to right, #F7CAC9, #92A8D1);
+            text-align: center;
+            padding: 4rem; 
+            position: relative; 
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .header .say-the-name {
+            font-family: 'Dancing Script', cursive;
+            color: #F7CAC9; 
+            font-size: 2rem; 
+            position: absolute; 
+            top: 10px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            z-index: 2; 
+        }
+
+        .header .seventeen {
+            font-family: 'The Youngest Serif';
+            color: #92A8D1;
+            font-size: 3rem; 
+            position: absolute; 
+            top: 30px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            z-index: 1; 
+        }
+        .content {
+            display: flex;
+            padding: 30px;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1); 
+        }
+
+        .content img {
+            width: 200px;
+            height: 200px;
+            border-radius: 15px; 
+            object-fit: cover;
+        }
+
+        .content p {
+            margin-left: 30px;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .album-boxes {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center;
+            padding: 20px;
+            background-color: #f2f5f7; 
+        }
+
+        .album-box {
+            background-color: #F7CAC9; 
+            border: 1px solid #92A8D1; 
+            border-radius: 10px; 
+            padding: 15px;
+            margin: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .album-box img {
+            width: 200px; 
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .album-box a {
+            text-decoration: none;
+            color: #333; 
+            font-weight: bold;
+        }
+
+        .album-box:hover {
+            transform: scale(1.05); 
+            background-color: #92A8D1; 
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=TeX+Gyre+Termes&display=swap'); 
+
+       
+        body {
+            font-family: 'TeX Gyre Termes', serif; 
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7; 
+        }
+
+        
+        .video-header {
+            background: linear-gradient(to right, #F7CAC9, #92A8D1); 
+            text-align: center; 
+            padding: 2rem; 
+            font-size: 2rem; 
+            color: white; 
+        }
+
+       
+        .video-section {
+            text-align: center; 
+            padding: 2rem; 
+            background-color: #f2f5f7; 
+        }
+
+        .video-section video {
+            width: 640px; 
+            height: 360px; 
+            border-radius: 10px; 
+        }
+
+        
+        .profile {
+            display: flex;
+            padding: 30px;
+            align-items: center;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .profile img {
+            width: 200px;
+            height: 200px;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+
+        .profile.left {
+            flex-direction: row;
+        }
+
+        .profile.right {
+            flex-direction: row-reverse; 
+        }
+
+        .profile p {
+            margin: 0 30px; 
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+   
+    <audio id="background-music" loop>
+        <source src="Adore you.mp3" type="audio/mpeg"> 
+        Your browser does not support the audio element.
+    </audio>
+
+   
+    <button class="mute-button" onclick="toggleMute()">
+        Click to Play Music
+    </button>
+
+    <script>
+    function toggleMute() {
+        var music = document.getElementById("background-music");
+        var button = document.querySelector(".mute-button");
+        
+        if (music.paused) {
+            music.play(); 
+            button.innerText = "Click to Mute Music"; 
+        } else {
+            music.pause(); 
+            button.innerText = "Click to Play Music"; 
+        }
+    }
+    </script>
+
+   
+    <div class="header">
+        <h1 class="say-the-name">Say the Name</h1>
+        <h1 class="seventeen">Seventeen</h1>
+    </div>
+
+    <!-- Content with Seventeen group image and description -->
+    <div class="content">
+        <img src="fe071f14e9deeaf1b8090466d58e5068.jpg" alt="Seventeen Group Photo"> <!-- Replace with your Seventeen image -->
+        <p>
+            SEVENTEEN (세븐틴) is a self-produced boy group that consists of 13 members <br>they are known for their impressive performances, diverse music, and charming personalities. <br>They have garnered a large following worldwide.
+            The group debuted on May 26, 2015, with the mini album “17 Carat” under PLEDIS Entertainment (PLSDIE)
+        </p>
+    </div>
+
+    <!-- Eleven album boxes -->
+    <div class="album-boxes">
+        <!-- Album boxes with placeholders -->
+        <div class="album-box">
+            <a href="https://www.pinterest.com/pin/7107311905549162/" target="_blank" rel="noopener norefferer">
+            <img src="1.jpg" alt="Mini Album 1"> <!-- Replace with your album cover -->
+        </a>
+        </div>
+        <div class="album-box">
+            <img src="2.jpg" alt="Mini Album 2">
+        
+        </div>
+        <div class="album-box">
+            <img src="3.jpg" alt="Mini Album 3">
+           
+        </div>
+        <div class="album-box">
+            <img src="4.jpg" alt="Mini Album 4">
+            
+        </div>
+        <div class="album-box">
+            <img src="5.jpg" alt="Mini Album 5">
+            
+        </div>
+        <div class="album-box">
+            <img src="6.jpg" alt="Mini Album 6">
+            
+        </div>
+        <div class="album-box">
+            <img src="7.jpg" alt="Mini Album 7">
+           
+        </div>
+        <div class="album-box">
+            <img src="8.jpg" alt="Mini Album 8">
+          
+        </div>
+        <div class="album-box">
+            <img src="9.jpg" alt="Mini Album 9">
+            
+        </div>
+        <div class="album-box">
+            <img src="10.jpg" alt="Mini Album 10">
+           
+        </div>
+        <div class="album-box">
+            <img src="11.jpg" alt="Mini Album 11">
+           
+        </div>
+    </div>
+
+   
+    <div class="profile left">
+        <img src="10a419829ed4dc7480873b276b0216b1.jpg" alt="S.coups"> 
+        <p>
+          🍒<br> S.coups is the leader and main rapper of Seventeen. <br>Known for his cha(rizz)ma and strong leadership, he guides the group with confidence.
+            <br> He loves melon pang. Very known for gyatt. <br> A BIcon.
+        </p>
+    </div>
+
+    <div class="profile right">
+        <img src="jeognhan.jpg" alt="Jeonghan"> <!-- Replace with Jeonghan image -->
+        <p>
+            Jeonghan is the lead vocalist with an angelic voice. His gentle personality and unique style make him a standout member.
+        </p>
+    </div>
+
+    <div class="profile left">
+        <img src="joshua.jpg" alt="Joshua"> <!-- Replace with Joshua image -->
+        <p>
+            Joshua is a talented vocalist with a smooth voice. Fluent in English, he connects Seventeen with international fans.
+        </p>
+    </div>
+
+    <div class="profile right">
+        <img src="jun.jpg" alt="Jun"> <!-- Replace with Jun image -->
+        <p>
+            Jun is a versatile performer, known for his dancing and singing. He brings a unique charm to the group.
+        </p>
+    </div>
+
+    <div class="profile left">
+        <img src="hoshi.jpg" alt="Hoshi"> <!-- Replace with Hoshi image -->
+        <p>
+            Hoshi is the group's main choreographer and performer. His energy and creativity are key to Seventeen's success.
+        </p>
+    </div>
+
+    <div class="profile right">
+        <img src="wonwoo.jpg" alt="Wonwoo"> <!-- Replace with Wonwoo image -->
+        <p>
+            Wonwoo is a skilled rapper with a deep voice. He brings a sense of mystery and coolness to the group.
+        </p>
+    </div>
+
+    <div class="profile left">
+        <img src="woozi.jpg" alt="Woozi"> <!-- Replace with Woozi image -->
+        <p>
+            Woozi is the main producer and a vocalist. His musical talent and dedication play a significant role in Seventeen's sound.
+        </p>
+    </div>
+
+    <div class="profile right">
+        <img src="the8.jpg" alt="The8"> <!-- Replace with The8 image -->
+        <p>
+            The8 is a skilled dancer with a unique style. He adds a distinct flavor to Seventeen's performances.
+        </p>
+    </div>
+
+    <div class="profile left">
+        <img src="mingyu.jpg" alt="Mingyu"> <!-- Replace with Mingyu image -->
+        <p>
+            Mingyu is a visual and rapper. His tall stature and striking appearance make him a standout member.
+        </p>
+    </div>
+
+    <div class="profile right">
+        <img src="dk.jpg" alt="DK"> <!-- Replace with DK image -->
+        <p>
+            DK is known for his powerful voice and cheerful personality. He brings a lot of energy to Seventeen's performances.
+        </p>
+    </div>
+
+    <div class="profile left">
+        <img src="seungkwan.jpg" alt="Seungkwan"> <!-- Replace with Seungkwan image -->
+        <p>
+            Seungkwan is the main vocalist, known for his strong voice and sense of humor. He's a key performer in Seventeen.
+        </p>
+    </div>
+
+    <div class="profile right">
+        <img src="vernon.jpg" alt="Vernon"> <!-- Replace with Vernon image -->
+        <p>
+            Vernon is a rapper with a laid-back style. He brings a relaxed vibe to the group and has a unique perspective.
+        </p>
+    </div>
+
+    <div class="profile left">
+        <img src="dino.jpg" alt="Dino"> <!-- Replace with Dino image -->
+        <p>
+            Dino is the youngest member and a talented dancer. Despite his age, he has a mature presence on stage.
+        </p>
+    </div>
+
+    <div class="video-header">
+        WATCH THIS VIDEO FOR CLEAR SKIN <!-- Title in the center with gradient background -->
+    </div>
+
+    <div class="video-section">
+        <video controls>
+            <source src="SEVENTEEN (세븐틴) 'MAESTRO' Official MV (720p).mp4" type="video/mp4"> 
+    </div>
+
+   
+</body>
+</html>
